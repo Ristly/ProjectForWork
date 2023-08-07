@@ -25,15 +25,12 @@ public class ShopDataManager
 {
     public Shop? Shop { get; set; }
 
-
-
     public async Task SetShopData()
     {
         WebRequest request;
         request = WebRequest.Create("https://yastatic.net/market-export/_/partner/help/YML.xml");
         request.Method = "GET";
 
-       
         request.ContentType = "application/xml";
         var response = (await request.GetResponseAsync())
             .GetResponseStream();

@@ -11,7 +11,6 @@ public class OfferActivity : Activity
 
         // Create your application here
         SetContentView(Resource.Layout.offer_data);
-        ShopDataManager request = new ShopDataManager();
         TextView textView = FindViewById<TextView>(Resource.Id.offerData);
         textView.Text = Intent.GetStringExtra("offer");
     }

@@ -46,15 +46,13 @@ public class CustomAdapter : BaseAdapter
         {
             holder = new CustomAdapterViewHolder();
             var inflater = context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
-            //replace with your item and your holder items
-            //comment back in
             view = inflater.Inflate(Resource.Layout.text_view, parent, false);
             holder.Content = view.FindViewById<TextView>(Resource.Id.itemTextView);
             view.Tag = holder;
         }
 
 
-        //fill in your items
+
         holder.Content.Text = items[position];
 
         return view;
@@ -73,6 +71,6 @@ public class CustomAdapter : BaseAdapter
 
 internal class CustomAdapterViewHolder : Java.Lang.Object
 {
-    //Your adapter views to re-use
+
     public TextView Content { get; set; }
 }
